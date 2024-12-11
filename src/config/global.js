@@ -17,7 +17,7 @@ export default {
       },
     ],
     numeroUnidad: '1',
-    tituloUnidad: 'Titulo de la unidad',
+    tituloUnidad: 'Condiciones de Seguridad y Salud en el Trabajo',
   },
   menuPrincipal: {
     menu: [

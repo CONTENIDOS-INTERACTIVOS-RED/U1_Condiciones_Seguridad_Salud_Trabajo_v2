@@ -5,7 +5,7 @@
       .bg-white
         .row.g-0
           //- Columna izquierda con imagen
-          .d-none.d-xl-block.d-xl-flex.mb-4.mb-md-0.col-md-4.col-xl-5.imagen-section
+          .d-none.d-xl-block.d-xl-flex.mb-4.mb-md-0.col-md-4.col-xl-6.imagen-section
             img.img-fluid.h-full(
               src="@/assets/portada/banner.png"
               alt="Estudiante virtual"
@@ -18,11 +18,14 @@
               style="max-width: 672px;"
             )
           //- Columna derecha con información
-          .col-xl-7.info-section
+          .col-xl-6.info-section
             .content-wrapper.px-lg-4.pt-lg-4.px-xxl-5.py-xxl-5.text-start
               p.home-main-title UNIDAD {{ `${globalData.numeroUnidad}` }}
               h1.home-title.mb-4 {{ globalData.tituloUnidad }}
-              p.descripcion.mb-4 Esta unidad, Desarrollo Físico y Motor en Niños y Adolescentes, explora los cambios corporales y habilidades motrices clave desde la niñez hasta la adolescencia. Los estudiantes comprenderán cómo factores como genética, nutrición y entorno influyen en el crecimiento y las transformaciones hormonales de la pubertad, lo cual les permitirá apoyar a los jóvenes en cada etapa de su desarrollo.
+              p.descripcion.mb-4 En un entorno laboral en constante cambio, garantizar la seguridad y salud en el trabajo es esencial para el desarrollo sostenible de las organizaciones. Esta unidad aborda el marco normativo y técnico en Colombia, proporcionando herramientas clave para identificar, evaluar y gestionar riesgos laborales. Además, promueve una cultura de prevención alineada con las normas nacionales e internacionales, integrando a todos los niveles de la organización en la construcción de ambientes laborales seguros y saludables.
+                br
+                br
+                |#[b ¡Prepárate para liderar iniciativas que transformen la seguridad en tu entorno profesional!]
 
               p.descripcion.mb-4.mb-lg-5.pb-lg-4.text-bold ¡El éxito está en cada esfuerzo que haces hoy!
 
@@ -102,7 +105,7 @@ export default {
       text-align: center
       display: flex
       .iniciar-btn-text
-        background-color: $color-sistema-d
+        background-color: $color-acento-botones
         padding: 12px 42px 12px 32px
         width: 100%
         color: #fff
@@ -146,11 +149,12 @@ export default {
 .iniciar-btn-container
   .iniciar-btn-text
     transition: all 0.25s ease-in-out
-    background-color: #9EF0FD !important
+    background-color: $color-acento-botones !important
     color: #0B0A0A !important
   .icon
     transition: all 0.25s ease-in-out
-    background-color: #083E61 !important
+    // background-color: #083E61 !important
+    background-color: darken($color-acento-botones, 30% ) !important
   &:hover
     .icon
       transform: scale(1.06)
