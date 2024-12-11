@@ -2,9 +2,9 @@
 .curso-main-container.creditos-vista
   BannerInterno(subTitulo="SÍNTESIS")
   .container.tarjeta.tarjeta--blanca.p-4.p-md-5
-    p.mb-4.mb-md-5 La unidad I:  Introducción al derecho y sus fuentes, establece los fundamentos teóricos esenciales para comprender el origen de las normas jurídicas y su aplicación. 
+    p.mb-4.mb-md-5 La Unidad 1: Marco normativo y técnico en seguridad y salud en el trabajo en Colombia establece los fundamentos normativos y técnicos esenciales para garantizar entornos laborales seguros y saludables en Colombia. Proporciona herramientas clave para identificar, evaluar y gestionar riesgos laborales, promoviendo una cultura de prevención alineada con las normas nacionales e internacionales. Este enfoque integral asegura que los estudiantes adquieran las competencias necesarias para diseñar e implementar sistemas de gestión en seguridad y salud, contribuyendo al bienestar de los trabajadores y al desarrollo sostenible de las organizaciones.
     figure
-      img(src='@/assets/componentes/sintesis-test.png', alt='Texto que describa la imagen')
+      img(src='@/assets/curso/temas/sintesis.svg', alt='Texto que describa la imagen')
     
 
 </template>
