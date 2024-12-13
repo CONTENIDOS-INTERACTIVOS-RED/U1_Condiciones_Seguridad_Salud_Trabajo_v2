@@ -296,10 +296,10 @@
               .row.justify-content-between.align-items-center
                 .col.mb-3.mb-sm-0
                   h3.mb-1 Resolución 0312 de 2019
-                  p.fst-italic Lo invitamos a profundizar en el tema, leyendo la totalidad de la Resolución, a través del siguiente enlace: 
+                  p Lo invitamos a profundizar en el tema, leyendo la totalidad de la Resolución, a través del siguiente enlace: 
                 .col-sm-auto
-                  a.boton.color-acento-botones.texto-blanco(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank")
-                    span Descargar
+                  a.boton.color-acento-botones(href="https://www.mintrabajo.gov.co/documents/20147/59995826/Resolucion+0312-2019-+Estandares+minimos+del+Sistema+de+la+Seguridad+y+Salud.pdf" target="_blank")
+                    span Ver Resolución Completa
                     i.fas.fa-arrow-right
 </template>
 

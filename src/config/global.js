@@ -42,7 +42,7 @@ export default {
         desarrolloContenidos: true,
       },
       {
-        nombreRuta: 'tema4',
+        nombreRuta: 'tema5',
         icono: 'far fa-file-alt',
         numero: '5',
         titulo: 'ISO 45001 del 2018',

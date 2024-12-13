@@ -146,7 +146,7 @@
                       h3.mb-1 Decreto 1072 de 2015.
                       p Para profundizar, lo invito a descargar el ABC del decreto 1072 de 2015.
                     .col-sm-auto
-                      a.boton.color-acento-botones.texto-blanco(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank")
+                      a.boton.color-acento-botones(href="https://www.colmenaseguros.com/documents/34929/40804/ABECE-Decreto-1072.pdf/ea961174-eb09-79d1-23b1-8a4e2aa72057?t=1702311076408" target="_blank")
                         span Descargar
                         i.fas.fa-arrow-right
 </template>

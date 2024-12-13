@@ -83,7 +83,7 @@
                   h3.mb-1 Ley 1562 de 2012 - Sistema de Riesgos Laborales
                   p Para profundizar y conocer un poco más acerca de la Ley 1562 del 2012, lo invitamos a ver el siguiente video: 
                 .col-sm-auto
-                  a.boton.color-acento-botones.texto-blanco(:href="obtenerLink('/downloads/prueba.pdf')" target="_blank")
+                  a.boton.color-acento-botones(href="https://www.youtube.com/watch?v=v1z6tcwu-Rw" target="_blank")
                     span Ver video
                     i.fas.fa-arrow-right
     .row.justify-content-center.mb-5
