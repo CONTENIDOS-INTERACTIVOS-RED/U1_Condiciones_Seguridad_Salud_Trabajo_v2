@@ -3,13 +3,13 @@
     <div class="col-lg-5">
       <img
         v-if="aprobado"
-        src="@/assets/componentes/cuestionario-resultado.svg"
+        src="@/assets/actividad/img_correcto.svg"
         alt=""
         class="mx-auto d-none d-lg-block"
       />
       <img
         v-else
-        src="@/assets/componentes/cuestionario-resultado.svg"
+        src="@/assets/actividad/img_incorrecto.svg"
         alt=""
         class="mx-auto d-none d-lg-block"
       />
@@ -65,7 +65,7 @@
         <hr class="w-100" />
         <p class="mb-0">Aciertos: {{ rtas.correctas }} / {{ rtas.total }}</p>
         <button
-          v-if="!aprobado || (aprobado && totalPreguntasBase > preguntasCount)"
+          v-if="totalPreguntasBase >= preguntasCount"
           class="boton btn-lg boton--b py-3 px-5 mt-3"
           @click="$emit('reiniciar')"
         >

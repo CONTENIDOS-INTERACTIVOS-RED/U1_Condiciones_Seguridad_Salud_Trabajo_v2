@@ -1,8 +1,13 @@
 <template>
-  <div class="tarjeta--blanca">
+  <div class="tarjeta--blanca--">
     <div class="row align-items-center mb-4">
       <div class="col-auto">
-        <img src="@/assets/componentes/icon-actividad.svg" alt="" />
+        <img
+          src="@/assets/actividad/icon.svg"
+          alt=""
+          width="90px"
+          style="max-width: 90px"
+        />
       </div>
       <div class="col ">
         <h2 class="titulo-tercero mb-0">
@@ -11,8 +16,8 @@
         <p class="mb-0" v-html="cuestionario.introduccion"></p>
       </div>
     </div>
-    <div class="tarjeta tarjeta--lightest-gray px-4 pb-4 pt-4 px-md-5">
-      <div
+    <div class="tarjeta tarjeta--lightest-gray px-4 pb-5 pt-5 px-md-5">
+      <!-- <div
         v-if="respuestas.length !== preguntas.length"
         class="d-flex justify-content-end mb-2"
       >
@@ -25,7 +30,7 @@
           />
           <label class="form-check-label" for="switchCheckAudio">¿Audio?</label>
         </div>
-      </div>
+      </div> -->
       <ActividadResultados
         v-if="respuestas.length === preguntas.length"
         :respuestas="respuestas"
@@ -160,6 +165,27 @@ export default {
       } else {
         this.reproducirSonido(failSound)
       }
+
+      setTimeout(() => {
+        this.continuarDisabled = true
+        if (this.respuestaActual.id) {
+          const idx = this.respuestas.findIndex(
+            r => r.id === this.preguntaSelected.id,
+          )
+          if (idx === -1) {
+            this.respuestas.push(this.respuestaActual)
+          } else {
+            this.respuestas[idx] = this.respuestaActual
+          }
+        }
+
+        if (this.preguntaSelectedIdx < this.preguntas.length - 1) {
+          this.preguntaSelectedIdx += 1
+          this.reproducirSonido(screenChangeSound)
+        } else {
+          this.finalizarPrueba()
+        }
+      }, 2000)
     },
     onContinuar() {
       this.continuarDisabled = true
@@ -217,4 +243,6 @@ export default {
 
 .tarjeta--lightest-gray
   border: 3px solid #dce4eb
+  background: #fff
+  // background: lighten(#dce4eb, 7%)
 </style>

@@ -1,19 +1,23 @@
 <template>
   <div>
-    <h3 class="mb-4 pb-4">
-      <strong
-        >{{ numeroPregunta }}. <span v-html="pregunta.texto"></span
-      ></strong>
-    </h3>
     <div class="row align-items-center">
-      <div class="d-none d-md-block col-5">
-        <img :src="pregunta.imagen" alt="" />
+      <div class="col-6">
+        <div class="pe-4">
+          <div class="row">
+            <div class="col-auto">
+              <span class="question__number">{{ numeroPregunta }}</span>
+            </div>
+            <div class="col">
+              <span class="question__text" v-html="pregunta.texto"></span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col">
         <div
           v-for="(respuesta, idx) in opcionesComputed"
           :key="respuesta.id"
-          class="tarjeta tarjeta--azul tarjeta-respuesta p-4"
+          class="tarjeta tarjeta-respuesta--azul tarjeta-respuesta p-3 px-4"
           :class="{
             'mb-3': idx !== opcionesComputed.length - 1,
             'tarjeta-respuesta--correcta': respuesta.correcta,
@@ -41,14 +45,15 @@
       </div>
     </div>
     <template v-if="respuestaSelected.id">
-      <hr />
-      <div v-if="respuestaSelected.esCorrecta" class="pt-1">
-        <span class="text-success h3 ma-0">¡Correcto!</span>
-        {{ pregunta.mensaje_correcto }}
-      </div>
-      <div v-else class="pt-1">
-        <span class="text-danger h3 ma-0">¡Incorrecto!</span>
-        {{ pregunta.mensaje_incorrecto }}
+      <div class="tarjeta tarjeta--blanca py-3 px-4 mt-4 d-none">
+        <div v-if="respuestaSelected.esCorrecta" class="pt-1">
+          <span class="text-success h3 ma-0">¡Correcto!</span>
+          {{ pregunta.mensaje_correcto }}
+        </div>
+        <div v-else class="pt-1">
+          <span class="text-danger h3 ma-0">¡Incorrecto!</span>
+          {{ pregunta.mensaje_incorrecto }}
+        </div>
       </div>
     </template>
   </div>
@@ -97,6 +102,24 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.question__text
+  font-family: Arial, Helvetica, sans-serif
+  color: $color-acento-contenido
+  font-weight: 700
+  font-size: 1.1em
+  color: $color-sistema-a
+
+.question__number
+  background-color: #F1A607
+  font-weight: 900
+  color: #fff
+  width: 32px
+  height: 32px
+  display: inline-block
+  text-align: center
+  font-size: 0.9em
+  line-height: 32px
+
 img
   width: auto
   height: auto
@@ -115,14 +138,14 @@ img
       background-image: url('~@/assets/actividad/vacio-hover.svg')
 
   &--correcta
-    border-color: #61ca92ff
-    background-color: #ebfff0ff
+    border-color: #61ca92ff !important
+    background-color: #ebfff0ff !important
     &:hover
       border-color: #61ca92ff
 
   &--incorrecta
-    border-color: #ff6b6bff
-    background-color: #ffedecff
+    border-color: #ff6b6bff !important
+    background-color: #ffedecff !important
     &:hover
       border-color: #ff6b6bff
 
@@ -143,4 +166,8 @@ img
 
     &--incorrecto
       background-image: url('~@/assets/actividad/incorrecto.svg')
+
+.tarjeta-respuesta--azul
+  background-color: lighten(#dce4eb, 5%)
+  border-color: #dce4eb
 </style>

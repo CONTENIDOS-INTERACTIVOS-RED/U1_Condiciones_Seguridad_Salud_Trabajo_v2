@@ -1,5 +1,5 @@
 <template>
-  <div class="tarjeta-avance">
+  <div class="tarjeta-avance p-3">
     <div class="row align-items-center">
       <div class="d-none d-md-block col">
         <div class="tarjeta-avance__barra-container ms-4">
@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="col col-md-auto text-center">
-        <span class="lh-1">
+        <span class="lh-1 tarjeta-avance__text">
           Pregunta {{ preguntaIndex + 1 }} de {{ preguntasCount }}
         </span>
       </div>
@@ -24,7 +24,7 @@
         </button>
         <button
           v-else
-          class="boton btn-lg boton--b py-3 px-4"
+          class="boton btn-lg boton--b py-3 px-4 d-none"
           :class="{ 'boton--disabled': continuarDisabled }"
           @click="$emit('continuar')"
         >
@@ -88,7 +88,7 @@ export default {
 
 <style lang="sass" scoped>
 .tarjeta-avance
-  background-color: #dce4ebff
+  background-color:  #dce4eb
   border-bottom-right-radius: 10px
   border-bottom-left-radius: 10px
   overflow: hidden
@@ -103,14 +103,17 @@ export default {
     pointer-events: none
 
   &__barra-container
-    background-color: #b4cce3ff
+    background-color: #FDF5E4
     border-radius: 8px
     height: 16px
     overflow: hidden
     .tarjeta-avance__barra
-      background-color: #2c70abff
+      background-color: #E5782C
       height: 100%
       border-radius: 8px
       width: 0%
       transition: width 0.5s
+
+  &__text
+    color: #000
 </style>
