@@ -132,8 +132,8 @@
       .col-lg-4.col-7.mb-lg-0.mb-3: img(src='@/assets/curso/temas/37.png', alt='')
       .col-lg-4
         .p-4.h-100.tarjeta(style="background-color: #FEE3D8")
-          p.mb-0 En Colombia, todas las empresas, sin importar su tamaño o sector, están obligadas a implementar el Sistema de Gestión de Seguridad y Salud en el Trabajo. Esto incluye tanto a los empleadores públicos como a los privados, y abarca a todos los trabajadores, independientemente de su tipo de contratación.
-    .row.justify-content-center.align-items-center.mb-5
+          p.mb-0 Esta normatividad, anteriormente mencionada, no solo es un reglamento, sino una herramienta poderosa que busca mejorar las condiciones laborales en Colombia. Al comprender a fondo su estructura, objetivos y obligaciones.
+    .row.justify-content-center.align-items-center.mb-0
           .col-lg-10
 
             .bg-color-white.shadow-soft.py-4.px-lg-5
@@ -149,25 +149,28 @@
                       a.boton.color-acento-botones(href="https://www.colmenaseguros.com/documents/34929/40804/ABECE-Decreto-1072.pdf/ea961174-eb09-79d1-23b1-8a4e2aa72057?t=1702311076408" target="_blank")
                         span Descargar
                         i.fas.fa-arrow-right
+
+
+    .bg-full-width.border-top.color-primario
+      .p-4.p-md-5
+        h2(data-aos="fade-left") MATERIAL COMPLEMENTARIO
+        .row.material-complementario
+          .col-12.col-md-6.col-lg-7
+            p Los invitamos a explorar el material complementario de este curso, en esta sección encontrará recursos que le permitirán profundizar y enriquecer su aprendizaje en los temas tratados en esta unidad.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://www.colmenaseguros.com/documents/34929/40804/ABECE-Decreto-1072.pdf/ea961174-eb09-79d1-23b1-8a4e2aa72057?t=1702311076408" target="_blank" rel="noopener noreferrer") Colmena Seguros. (s.f.). ABECÉ: Decreto 1072.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://safetya.co/normatividad/resolucion-0312-de-2019/#a3" target="_blank" rel="noopener noreferrer") Safety A. (2019). Resolución 0312 de 2019.
+
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/icono-yt.svg' :style="{'max-width':'16px'}")
+              a(href="https://www.youtube.com/watch?v=9aveK0Ktszk" target="_blank" rel="noopener noreferrer") CATP Consultor. (2022, 5 junio). ESTANDARES PARA EMPRESAS + DE 50 TRABAJADORES y MENOS DE 50 RIESGO IV o V RESOLUCION 0312 DE 2019 [Vídeo]. YouTube.
+
+          .col-12.col-md-6.col-lg-3.offset-lg-1
+            figure
+              img(src='@/assets/componentes/material-complementario.svg', alt='')
 </template>
-
-<script>
-import BannerInterno from '../../components/plantilla/BannerInterno'
-export default {
-  name: 'Tema3',
-  components: {
-    BannerInterno,
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.$aosRefresh()
-    })
-  },
-}
-</script>
-
-<style lang="sass">
-.material-complementario
-  padding-top: 3rem
-  border-top: 9px solid $color-sistema-e
-</style>

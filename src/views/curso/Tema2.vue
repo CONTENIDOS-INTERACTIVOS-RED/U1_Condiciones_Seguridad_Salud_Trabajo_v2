@@ -65,27 +65,27 @@
         .row.bg-white.p-5
           .col-lg-6.mb-4.mb-md-0
             h4 Promoción de cultura preventiva
-            p.mb-0 La Ley impulsa la formación y la implementación del Sistema de Gestión de Seguridad y Salud Laboral (SG-SST), lo que ayuda a desarrollar una cultura de prevención sólida
+            p.mb-0 La Ley impulsa la formación y la implementación del Sistema de Gestión de Seguridad y Salud Laboral (SG-SST), lo que ayuda a desarrollar una cultura de prevención sólida.
           .col-lg-6
             figure
               img(src='@/assets/curso/temas/16.png', alt='Texto que describa la imagen')
     p.mb-4 Estos cambios han contribuido a mejorar las condiciones de trabajo y la calidad de vida de los trabajadores, además de reducir los índices de accidente y enfermedad laboral en Colombia.
-    .row.justify-content-center.align-items-center.mb-5
-      .col-lg-10
+    //- .row.justify-content-center.align-items-center.mb-5
+    //-   .col-lg-10
 
-        .bg-color-white.shadow-soft.py-4.px-lg-5
-          .row.justify-content-around.align-items-center
-            .col-md-auto
-              img(src="@/assets/curso/temas/video.svg", style="width: 90px;")
-            .col
-              .row.justify-content-between.align-items-center
-                .col.mb-3.mb-sm-0
-                  h3.mb-1 Ley 1562 de 2012 - Sistema de Riesgos Laborales
-                  p Para profundizar y conocer un poco más acerca de la Ley 1562 del 2012, lo invitamos a ver el siguiente video: 
-                .col-sm-auto
-                  a.boton.color-acento-botones(href="https://www.youtube.com/watch?v=v1z6tcwu-Rw" target="_blank")
-                    span Ver video
-                    i.fas.fa-arrow-right
+    //-     .bg-color-white.shadow-soft.py-4.px-lg-5
+    //-       .row.justify-content-around.align-items-center
+    //-         .col-md-auto
+    //-           img(src="@/assets/curso/temas/video.svg", style="width: 90px;")
+    //-         .col
+    //-           .row.justify-content-between.align-items-center
+    //-             .col.mb-3.mb-sm-0
+    //-               h3.mb-1 Ley 1562 de 2012 - Sistema de Riesgos Laborales
+    //-               p Para profundizar y conocer un poco más acerca de la Ley 1562 del 2012, lo invitamos a ver el siguiente video: 
+    //-             .col-sm-auto
+    //-               a.boton.color-acento-botones(href="https://www.youtube.com/watch?v=v1z6tcwu-Rw" target="_blank")
+    //-                 span Ver video
+    //-                 i.fas.fa-arrow-right
     .row.justify-content-center.mb-5
       .col-lg-8.mb-lg-0.mb-3
         p.mb-4 La Ley se aplica a todos los sectores económicos, abarcando tanto actividades en el sector público, como en el privado. Establece obligaciones claras para empleadores y trabajadores en términos de prevención, atención y reparación de riesgos laborales, creando un marco normativo que busca proteger a todos los involucrados en relaciones laborales.
@@ -97,16 +97,32 @@
               p.mb-0  En resumen, la Ley 1562 del 2012, representa un avance significativo en la protección de los trabajadores en Colombia, al establecer un marco normativo que busca garantizar la salud y la seguridad en el trabajo. Con su enfoque en la prevención, la cobertura universal y la participación de los trabajadores y empleadores, se abre un camino para mejorar las condiciones laborales en el país. 
       .col-lg-4.col-7: img(src='@/assets/curso/temas/18.png', alt='')
 
+    .bg-full-width.border-top.color-primario
+      .p-4.p-md-5
+        h2(data-aos="fade-left") MATERIAL COMPLEMENTARIO
+        .row.material-complementario
+          .col-12.col-md-6.col-lg-7
+            p Los invitamos a explorar el material complementario de este curso, en esta sección encontrará recursos que le permitirán profundizar y enriquecer su aprendizaje en los temas tratados en esta unidad.
 
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/225263" target="_blank" rel="noopener noreferrer") Cortés, J. M. (2018). Sistemas de gestión de la seguridad y salud en el trabajo (ISO 45001:2018): (1 ed.). Editorial ICB.
 
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://elibro.net/es/lc/tecnologicadeloriente/titulos/56053" target="_blank" rel="noopener noreferrer") Cortés, J. M. (2017). Sistemas de gestión de calidad (ISO 9001:2015): ( ed.). Editorial ICB.
 
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/icono-yt.svg' :style="{'max-width':'16px'}")
+              a(href="https://www.youtube.com/watch?v=jatFhYhmcFE" target="_blank" rel="noopener noreferrer") CATP Consultor. (2021, 1 octubre). IDENTIFICACION DE REQUISITOS LEGALES EN SEGURIDAD y SALUD EN EL TRABAJO [Vídeo]. YouTube.
 
+            p.d-flex.my-4
+              img.me-3(src='@/assets/componentes/link.svg' :style="{'max-width':'16px'}")
+              a(href="https://ilo.org/" target="_blank" rel="noopener noreferrer") Organización Internacional del Trabajo (OIT)
 
-
-
-
-
-
+          .col-12.col-md-6.col-lg-3.offset-lg-1
+            figure
+              img(src='@/assets/componentes/material-complementario.svg', alt='')
 
 </template>
 
